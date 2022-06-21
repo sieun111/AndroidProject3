@@ -7,10 +7,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_marginLeft="50dp">
+        android:layout_marginStart="50dp">
 
         <GridView
             android:id="@+id/gridview1"
+            android:listSelector="@drawable/selected"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:numColumns="7">
@@ -20,29 +21,37 @@
     </LinearLayout>
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/design_default_color_primary_dark"
         >
 
         <GridView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_gravity="fill"
             android:drawSelectorOnTop="true"
             android:background="@color/purple_500"
             android:horizontalSpacing="2dp"
             android:verticalSpacing="1dp"
             android:id="@+id/gridview2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:layout_weight="1"
             android:listSelector="@drawable/selected"
             android:numColumns="8"
             android:stretchMode="columnWidth"
             android:textAlignment="gravity"
+            android:layout_gravity="fill"></GridView>
 
-            />
-
-    </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:src="@android:drawable/ic_input_add" />
+    </RelativeLayout>
 
 </LinearLayout>
